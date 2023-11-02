@@ -13,14 +13,18 @@ class Card {
     constructor({ image, text, isVisible }: ICard) {
         const card = document.createElement('div');
 
+        // I see DRY here
+
         const img = document.createElement('img');
         img.src = '../public/back-part.png';
         img.className = 'img';
 
+        // I see DRY here
         const textC = document.createElement('p');
         textC.className = !isVisible ? 'text' : 'text--active';
         textC.textContent = text;
 
+        // I see DRY here
         card.append(textC);
         card.append(img);
 
